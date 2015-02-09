@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Fotag!</title>
+
+    <link rel="stylesheet" href="css/fotag.css"/>
+    <style>
+        .marking-button {
+            float:right;
+        }
+        .marking-div-clear {
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app-container">
+</div>
+
+<template id="file-chooser">
+    <input type="file" class="files-input" name="file_results[]" multiple />
+    <output id="list"></output>
+</template>
+
+<template id="image-template">
+    <div class="image-container">
+        <img class="image">
+        <div class="data-container">
+            <div class="name"></div>
+            <div class="caption"></div>
+            <div class="rating"></div>
+            <div class="date"></div>
+        </div>
+    </div>
+</template>
+
+<template id="toolbar-template">
+    <div id="toolbar">
+        <span class="view-selector">
+        </span>
+        <span class="header">
+            <div class="title">
+            Fotag!</div>
+        </span>
+        <span class="filter-selector">
+            <span class="rating-label">
+            Filter by:</span>
+        </span>
+    </div>
+</template>
+
+<template id="edit-template">
+    <div id="background-div">
+        <div id="edit-container">
+            <img class="image">
+            <input class="text" type="text" value="">
+            <div class="rates"></div>
+            <button class="ok">OK</button>
+            <button class="cancel">Cancel</button>
+        </div>
+    </div>
+</template>
+<div id="unit-tests">
+
+    <button class="marking-button">Mark Me!</button>
+    <div class="marking-div-clear"></div>
+
+    <a href="unit_tests.html">Run Unit Tests</a>
+</div>
+
+<script src="js/ext/underscore.js"></script>
+<script src="js/model.js"></script>
+<script src="js/view.js"></script>
+<script src="js/fotag.js"></script>
+<script src="js/markers_code.js"></script>
+</body>
+</html>
